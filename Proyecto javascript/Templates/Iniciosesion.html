@@ -18,7 +18,7 @@
       <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
       <nav>
         <div class="nav-wrapper #e65100 orange darken-4">
-          <a href="#" class="brand-logo center">ChatSpace</a>
+          <a href="#" class="brand-logo center">ChatSpace®</a>
           <ul id="nav-mobile" class="left hide-on-med-and-down">
           </ul>
         </div>
@@ -26,48 +26,53 @@
 
       <div class="parallax-container">
         <div class="parallax"><img src="../Resources/images/orange1.jpg"/></div>
-                <br/><br/><br/><br/><br/><br/>
+                <br/><br/>
                 <h1 class="center-align white-text" id="titulo1"><strong>Bienvenid@ a ChatSpace</strong></h1>
+                <div align="center">
+                  <img src="../Resources/logo.svg" width="400"/>
+                </div>
                 <h4 class="center-align white-text"><strong>Inicio de Sesión</strong></h4>
       </div>
       <br/><br/><br/>
       <div class="row">
-        <form class="col s12">
+        <form class="col s12" id="formu" action="../programs/sesion.php" method="POST">
           <div class="row">
             <div class="input-field col s6">
               <i class="material-icons prefix">account_circle</i>
-              <input id="usuario" type="text" class="validate">
+              <input id="usuario" type="text" class="validate" name='usu' required>
               <label for="usuario">Nombre de Usuario</label>
+              <div id="valusu">Validación Usuario</div>
             </div>
             <div class="input-field col s6">
               <i class="material-icons prefix">vpn_key</i>
-              <input id="contraseña" type="text" class="validate">
-              <label for="contraseña">Contraseña</label>
+              <input id="contrasena" type="password" class="validate" name='cont' required>
+              <label for="contrasena">Contraseña</label>
+              <div id="valcont">Validación contraseña</div>
             </div>
           </div>
           <br/>
           <div class="row" style="text-align:center;">
-            <button class="btn waves-effect waves-light #e65100 orange darken-4" type="submit" name="action">Iniciar Sesión
+            <button class="btn waves-effect waves-light #e65100 orange darken-4" type="submit" id="submit">Iniciar Sesión
               <i class="material-icons right">send</i>
             </button>
           </div>
-      </form>
-    </div>
-    <br/><br/>
-    <footer class="page-footer #e65100 orange darken-4">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Just To Friends®</h5>
+        </form>
+      </div>
+      <br/><br/>
+      <footer class="page-footer #e65100 orange darken-4">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Just To Friends®</h5>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="footer-copyright #bf360c deep-orange darken-4">
-        <div class="container">
-          © 2017 Copyright Text
+        <div class="footer-copyright #bf360c deep-orange darken-4">
+          <div class="container">
+            © 2017 Copyright Text
+          </div>
         </div>
-      </div>
-    </footer>
-    <script type="text/javascript" src="../programs/sesion.js"></script>
+      </footer>
+      <script type="text/javascript" src="../programs/sesion.js"></script>
   </body>
   </html>
