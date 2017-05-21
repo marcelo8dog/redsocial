@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $('.parallax').parallax();
     $("#animacion").hide();
+    $("#body2").hide();
 });
 $("#formu").on("submit",function(){
   event.preventDefault();
@@ -21,10 +22,23 @@ $("#formu").on("submit",function(){
       if(resp=="BIENVENIDO")
       {
         $("#body").hide();
+        $("#body2").hide();
         $("#animacion").show();
         setInterval(function(){
             $("#animacion").hide();
-            $("#body").show();
+            $("#body2").show();
+            $("#nom").html(usu);
+            $("#nom2").html(usu);
+            $('.dropdown-button').dropdown({
+              inDuration: 300,
+              outDuration: 225,
+              constrainWidth: false,
+              hover: true,
+              gutter: 0,
+              belowOrigin: false,
+              alignment: 'left',
+              stopPropagation: false
+            });
         },7000);
       }
     }
