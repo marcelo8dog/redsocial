@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lista de amigos</title>
+    <style>
+      .push{
+
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+    <div class="push">
+      <button class="" onclick="openAmigo('Friends')">Amigos</button>
+      <button class="" onclick="openAmigo('Enemy')">Enemigos</button>
+    </div>
+  </tr>
+  <tr>
+   <div id="Friends" class="lista">
+      <h2>Amigos</h2>
+      <p>Todos tus amigos:</p>
+    </div>
+
+    <div id="Enemy" class="lista" style="display:none">
+      <h2>Enemigos</h2>
+      <p>Personas bloqueadas:</p>
+    </div>
+  </tr>
+  </table>
+    <script type="text/javascript">
+      function openAmigo(Name) {
+      var i;
+      var x = document.getElementsByClassName("lista");
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      document.getElementById(Name).style.display = "block";
+      }
+    </script>
+  </body>
+</html>

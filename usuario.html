@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatSpace</title>
+<style>
+body {
+    background: #ff944d;
+}
+
+.sidenav .usuari {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0; -- posicion de el nav--
+    left: 0;
+    background-color: #800000;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.sidenav .amigo {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0; -- posicion de el nav--
+    left: 0;
+    background-color: #800000;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.sidenav .configuracion {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0; -- posicion de el nav--
+    left: 0;
+    background-color: #800000;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ff751a;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #991f00;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <div id="Usu" class="usuari">
+              <img src="images/portada.jpg" >
+              <div>
+                 <img width="35" height="40" src="images/usuario.png" class="circle responsive-imgage"/>
+               </div>
+                <h1>Kevin Mc N.</h1> <h4>Correo@hotmail.com</h4>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeUsuario()">&times;</a>
+        <a href="#">Domicilio</a>
+        <a href="#">Estudios</a>
+        <a href="#">Pasatiempos</a>
+        <a href="#">Fecha de Nacimiento</a>
+    </div>
+    <div id="amigos" class="amigo">
+                <img src="images/portada.jpg" >
+                <div>
+                   <img width="35" height="40" src="images/usuario.png" class="circle responsive-imgage"/>
+                 </div>
+                  <h1>Kevin Mc N.</h1> <h4>Correo@hotmail.com</h4>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeAmig()">&times;</a>
+          <a href="#">Amigos conectados:<h2>Ninguno</h2></a>
+          <a href="Perfil.html">Todos tus amigos</a>
+
+      </div>
+      <div id="configuracion" class="configuracion">
+                  <img src="images/portada.jpg" >
+                  <div>
+                     <img width="35" height="40" src="images/usuario.png" class="circle responsive-imgage"/>
+                   </div>
+                    <h1>Kevin Mc N.</h1> <h4>Correo@hotmail.com</h4>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeConfi()">&times;</a>
+            <a href="#">General</a>
+            <a href="#">Seguridad</a>
+            <a href="#">Idioma: español</a>
+        </div>
+</div>
+<div>
+  <button style="font-size:22px;cursor:pointer" onclick="openUsuario()">&#9776;Perfil</button><br/>
+  <button style="font-size:22px;cursor:pointer" onclick="openAmigos()">&#9776;Amigos</button><br/>
+  <button style="font-size:22px;cursor:pointer" onclick="openConfiguracion()">&#9776;Configuracion</button><br/>
+</div>
+
+<script>
+function openUsuario() {
+    document.getElementById("Usu").style.width = "250px";
+  }
+  function openAmigos() {
+      document.getElementById("amigos").style.width = "250px";
+    }
+    function openConfiguracion() {
+        document.getElementById("configuracion").style.width = "250px";
+      }
+
+  function closeUsuario() {
+      document.getElementById("Usu").style.width = "0";
+  }
+  function closeAmig() {
+      document.getElementById("amigos").style.width = "0";
+  }
+  function closeConfi() {
+      document.getElementById("configuracion").style.width = "0";
+  }
+</script>
+
+</body>
+</html>
