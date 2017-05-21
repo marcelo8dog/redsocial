@@ -17,17 +17,17 @@
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="700" height="700" id="svgimag">
   	       <image xlink:href="../Resources/puma_1.png" x="75" y="120" width="500" id="puma"/>
            <text x="350" y="600" font-family="Arial" font-size="50" navy text-anchor="middle">CARGANDO...</text>
-         </svg>
+        </svg>
+        <script type="text/javascript">
+          var puma = 0;
+          $(document).ready(function(){
+              setInterval(function(){
+                puma++;
+                $("#puma").attr("xlink:href","../Resources/puma_"+((puma%8)+1)+".png");
+              },50);
+            });
+        </script>
       </div>
-      <script type="text/javascript">
-        var puma = 0;
-        $(document).ready(function(){
-            setInterval(function(){
-              puma++;
-              $("#puma").attr("xlink:href","../Resources/puma_"+((puma%8)+1)+".png");
-            },50);
-          });
-      </script>
       <div id="body">
       <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -94,5 +94,61 @@
         </footer>
         <script type="text/javascript" src="../programs/sesion.js"></script>
     </body>
+    </div>
+    <div id="body2">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+      <nav>
+        <div class="nav-wrapper #e65100 orange darken-4">
+          <a href="#" class="brand-logo left">ChatSpace®</a>
+          <a href="#" id="nom2" class="brand-logo right"></a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+          </ul>
+        </div>
+      </nav>
+      <nav>
+        <div class="nav-wrapper">
+          <form>
+            <div class="input-field #b71c1c red darken-4">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
+      <br/><br/>
+      <a class='dropdown-button btn #b71c1c red darken-4' href='#' data-activates='dropdown1'>VER PERFIL</a>
+      <br/>
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!"><i class="material-icons">account_circle</i><i class="material-icons">info</i></a></li>
+        <li><a href="#!" id="nom"></a></li>
+        <li class="divider"></li>
+        <li><a href="#!"><i class="material-icons">supervisor_account</i>Amigos</a></li>
+        <li><a href="#!"><i class="material-icons">email</i>Correo Electrónico</a></li>
+        <li><a href="#!"><i class="material-icons">location_on</i>Domicilio</a></li>
+        <li><a href="#!"><i class="material-icons">class</i>Estudios</a></li>
+        <li><a href="#!"><i class="material-icons">queue_music</i>Pasatiempos</a></li>
+        <li><a href="#!"><i class="material-icons">perm_contact_calendar</i>Fecha de nacimiento</a></li>
+        <li><a href="#!"><i class="material-icons">settings</i>Configuraciones</a></li>
+      </ul>
+      <div id="todo">
+
+      </div>
+    	<footer class="page-footer #e65100 orange darken-4" id="foot">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Just To Friends®</h5>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright #bf360c deep-orange darken-4">
+        <div class="container">
+          © 2017 Copyright Text
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="../programs/principal.js"></script>
   </div>
 </html>
