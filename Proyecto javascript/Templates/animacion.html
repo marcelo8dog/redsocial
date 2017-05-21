@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Animación</title>
+    <script type="text/javascript" src="../Resources/jquery.min.js"></script>
+  </head>
+  <body>
+      <div align="middle">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="700" height="700" id="svgimag">
+  	       <image xlink:href="../Resources/puma_1.png" x="75" y="120" width="500" id="puma"/>
+           <text x="350" y="600" font-family="Arial" font-size="50" navy text-anchor="middle">CARGANDO...</text>
+         </svg>
+      </div>
+      <script type="text/javascript">
+        var puma = 0;
+        $(document).ready(function(){
+            setInterval(function(){
+              puma++;
+              $("#puma").attr("xlink:href","../Resources/puma_"+((puma%8)+1)+".png");
+            },50);
+          });
+      </script>
+  </body>
+</html>

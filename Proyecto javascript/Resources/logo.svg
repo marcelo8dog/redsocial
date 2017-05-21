@@ -1,0 +1,12 @@
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <ellipse  cx="100" cy="50" rx="60" ry="30" fill="orange" stroke="black"/>
+  <ellipse  cx="100" cy="55" rx="90" ry="15" fill="yellow" stroke="black"/>
+  <text x="100" y="60" font-family="Arial" text-anchor="middle">ChatSpace®</text>
+  <rect x="85" y="18" width="25" height="10" fill="blue"/>
+  <polygon points="103,12 118,23 103,34" fill="blue"/>
+  <rect x="5" y="40" width="35" height="20" fill="white" stroke="black" transform="rotate(-20)"/>
+  <polygon points="18,36 40,42 51,24" fill="white" stroke="black"/>
+  <rect x="155" y="-15" width="35" height="20" fill="white" stroke="black" transform="rotate(15)"/>
+  <polyline points="155,26 160,35 178,40 188,35" fill="skyblue" stroke="black"/>
+  <polygon points="155,26 175,17 187,35" fill="white" stroke="black"/>
+</svg>

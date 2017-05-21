@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <title>Iniciar Sesión</title>
+
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+      <script type='text/javascript' src='../Resources/jquery-3.2.1.js'> </script>
+
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+      <nav>
+        <div class="nav-wrapper #e65100 orange darken-4">
+          <a href="#" class="brand-logo center">ChatSpace®</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+          </ul>
+        </div>
+      </nav>
+
+      <div class="parallax-container">
+        <div class="parallax"><img src="../Resources/images/orange1.jpg"/></div>
+                <br/><br/>
+                <h1 class="center-align white-text" id="titulo1"><strong>Bienvenid@ a ChatSpace</strong></h1>
+                <div align="center">
+                  <img src="../Resources/logo.svg" width="400"/>
+                </div>
+                <h4 class="center-align white-text"><strong>Inicio de Sesión</strong></h4>
+      </div>
+      <br/><br/><br/>
+      <div class="row">
+        <form class="col s12" id="formu" action="../programs/sesion.php" method="POST">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="usuario" type="text" class="validate" name='usu' required>
+              <label for="usuario">Nombre de Usuario</label>
+              <div id="valusu">Validación Usuario</div>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">vpn_key</i>
+              <input id="contrasena" type="password" class="validate" name='cont' required>
+              <label for="contrasena">Contraseña</label>
+              <div id="valcont">Validación contraseña</div>
+            </div>
+          </div>
+          <br/>
+          <div class="row" style="text-align:center;">
+            <button class="btn waves-effect waves-light #e65100 orange darken-4" type="submit" id="submit">Iniciar Sesión
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <br/><br/>
+      <footer class="page-footer #e65100 orange darken-4">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Just To Friends®</h5>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright #bf360c deep-orange darken-4">
+          <div class="container">
+            © 2017 Copyright Text
+          </div>
+        </div>
+      </footer>
+      <script type="text/javascript" src="../programs/sesion.js"></script>
+  </body>
+  </html>
