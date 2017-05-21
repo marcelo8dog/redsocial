@@ -1,11 +1,7 @@
 <?php
 	$pubcam=["nombre_usuario"];
 	$cone=mysqli_connect("localhost","root","","redsocial");
-
-	if(!$cone)
-	{
-		echo "conexion fallida";
-	}
+	
 	if(isset($_POST['usu']))
 	{
 		$usu=$_POST['usu'];
@@ -15,7 +11,6 @@
 	if($usu!="")
 	{
 		$que="SELECT usuario.nombre_usuario,publicacion.texto_publicacion,publicacion.id_publicacion,publicacion.tiempo_publicacion FROM publicacion JOIN usuario ON usuario.id_usuario=publicacion.id_usuario";
-	}
 	$impor=mysqli_query($cone,$que);
 	$fila=mysqli_fetch_assoc($impor);
 	$rell="";
@@ -23,15 +18,15 @@
 	{
 		$rell=$rell."
 		<div class='row'>
-        	<div class='col s12 l6 offset-l3' id='pub'>
-            	<div class='card orange darken-1'>
+        	<div class='col s12 l6 offset-l3 ' id='pub'>
+            	<div class='card orange darken-1 z-depth-5'>
               		<div class='card-content white-text'>
 		                <span class='card-title'>".$fila['nombre_usuario']."<p>".$fila['tiempo_publicacion']."</p></span>
 		                <p>".$fila['texto_publicacion']."</p>
               		</div>
                  	<ul class='collapsible' data-collapsible='accordion' >
     <li>
-      <div onclick='collapsible()' class='collapsible-header'><i class='material-icons'>filter_drama</i>Comentarios</div>";
+      <div onclick='collapsible()' class='collapsible-header'><i class='material-icons'>textsms</i>Comentarios</div>";
       	$pub=$fila['id_publicacion'];
       		if($pub>0)
       		{
@@ -48,14 +43,21 @@
 			$rell=$rell.$rellcom."
     </li>
   </ul>
-              	</div>
+              	<div class='row'>
+      <form method='POST' action='adentro2.php'>
+        <div class='row'>
+          <div class='input-field col s6'>
+            <input id='input_text' name='com".$fila['id_publicacion']."' type='text' data-length='30'>
+            <label for='input_text'>Comentar</label>
+          </div>
+        </div>
+      </form>
+        </div>
             </div>
         </div>";
       
 		$fila=mysqli_fetch_assoc($impor);
 	}
 	echo $rell;
-	// echo "bienlo";
-// echo "bien";
-
+}
 ?>

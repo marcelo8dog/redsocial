@@ -26,10 +26,6 @@
         font-size:15px;
         display:inline;
       }
-      /*#pob
-      {
-        height:900px;
-      }*/
       </style>
     </head>
     <body>
@@ -40,13 +36,8 @@
         </div>
     </nav>
     <div id="todo">
-       <ul class="collapsible" data-collapsible="accordion" >
-    <li>
-      <div onclick="collapsible()" class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-  </ul>
-      </div>
+      
+    </div>
     	<footer class="page-footer #e65100 orange darken-4" id="foot">
       <div class="container">
         <div class="row">
@@ -62,7 +53,21 @@
       </div>
     </footer>
 
+<?php
+for($a=1;$a<20;$a++)
+    {
+      $r="";
+      $cnom="com".$a;
+      $pnom=(isset($_POST[$cnom]))?$_POST[$cnom]:"";
+      if($pnom!="")
+      {
+        echo "<h1 id='resol'>".$pnom."</h1>";
+        $r=$a;
+        $a=20;
+      } 
+    }
 
+?>
     <script>
           var aj="id";
             $.ajax(
@@ -78,37 +83,12 @@
                     $("#todo").append(dato);
                   }
               });
+            var com=$("#resol").attr();
+            alert(com);
             function collapsible()
             {
                 $(".collapsible").collapsible();
             }
-            // $("#com").after("com");
-            // $.ajax(
-            //   {
-            //       url:"publi.php",
-            //       // data:
-            //       // {
-            //       //   mivari:x
-            //       // },
-            //       success:function(dato)
-            //       {
-            //         $("#conpub").html(dato);
-            //       }
-            //   });
-       // var idusuj;
-        // $.ajax(
-        // {
-        //   url:"publi.php",
-        //   // data:
-        //   // {
-        //   //     idusu:idusuj
-        //   // },
-        //   sucess:function(dato)
-        //   {
-        //     $("#conpub").html(dato);
-        //   }
-
-        // });
     </script>
     </body>
   </html>
